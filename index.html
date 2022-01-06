@@ -9,6 +9,8 @@
         <!--Style Sheets-->
         <link rel="stylesheet" href="css/main.css" />
         <link rel="stylesheet" href="css/nav.css" />
+        <link rel="stylesheet" href="css/forms.css" />
+
     </head>
 
     <body>
@@ -25,7 +27,7 @@
         </header>
      
     <main class="wrapper">
-        <form method="get" action="">
+        <form method="get" action="" class="main-form">
             <div>
                 <lable for="FirstName">First Name</lable>: <br />
                     <input type="text" name="FirstName" id="FirstName" placeholder="First Name" required="required" autofocus />
@@ -55,12 +57,27 @@
             <div>
                 <fieldset>
                     <legend>Would you like to join our mailing list?</legend>
-                    <label><input type="radio" name="JoinMailingList" value="Yes" /> Yes</label><br />
+                    <label><input type="radio" name="JoinMailingList" value="Yes" required="required" /> Yes</label><br />
                     <label><input type="radio" name="JoinMailingList" value="No" /> No</label>
                 </fieldset>
             </div>
             <div>
-                <input type="submit" />
+                <fieldset>
+                    <legend>Interested In?</legend>
+                    <label><input type="checkbox" name="InterestedIn" value="Website" /> Website</label><br />
+                    <label><input type="checkbox" name="InterestedIn" value="OnlineCalendar" /> Online Calendar</label><br />
+                    <label><input type="checkbox" name="InterestedIn" value="ContactForm" /> Contact Form</label><br />
+                    <label><input type="checkbox" name="InterestedIn" value="Lollipops" /> Complimentary Lollipops</label><br />
+                </fieldset>
+            </div>
+
+            <div>
+                <lable for="Comments">Comments</lable>: <br />
+                <textarea name="Comments" cols="36" rows="4" id="Comments"></textarea>
+            </div>
+
+            <div>
+                <input type="submit" value="Submit it!"/>
             </div>
         </form>
         <footer>

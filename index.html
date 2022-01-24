@@ -31,6 +31,34 @@
     <main class="wrapper">
         <div id="output">
             <form method="get" action="" class="main-form">
+                <h3>Widgets</h3>
+
+                <div id="widgets">
+                    <div>
+                        <b>Widget</b><br />
+                        <p>Our Widgets are spring loaded and need no batteries!</p>
+                        <p>At $3.99 they're a bargain!</p>
+                        <p><label><input type="checkbox" name="Cart" value="Widget" /> Add to Cart</label></p>
+                        <div class="pic"><img src="images/widget.png" /></div>
+                    </div>
+                    <div>
+                        <b>Sprocket</b><br />
+                        <p>Our Sprockets are well made and hold up to extreme pressure!</p>
+                        <p>They only cost $5.99!</p>
+                        <p><label><input type="checkbox" name="Cart" value="Sprocket" /> Add to Cart</label></p>
+                        <div class="pic"><img src="images/sprocket.png" /></div>
+                    </div>
+                    <div>
+                        <b>Thingy</b><br />
+                        <p>Our Thingys have many uses, and people love them</p>
+                        <p>Such a deal at $1.99!</p>
+                        <p><label><input type="checkbox" name="Cart" value="Thingy" /> Add to Cart</label></p>
+                        <div class="pic"><img src="images/thingy.png" /></div>
+                    </div>
+                </div>
+        
+
+                <h3>Shipping Information</h3>
                 <div>
                     <lable for="FirstName">First Name</lable>: <br />
                         <input type="text" name="First_Name" id="FirstName" placeholder="First Name" required="required" autofocus />
@@ -48,6 +76,10 @@
                         <input type="text" name="Address" id="Address" placeholder="Address" required="required" title="Address is a required field" />
                 </div>
                 <div>
+                    <lable for="City">City</lable>: <br />
+                        <input type="text" name="City" id="City" placeholder="City" required="required" title="City is a required field" />
+                </div>
+                <div>
                     <lable for="State">State</lable>: <br />
                     <select name="State" id="State">
                         <option value="">Please select state</option>
@@ -57,6 +89,11 @@
                         <option value="WA">Washington</option>
                     </select>
                 </div>
+                <div>
+                    <lable for="PostalCode">Postal Code</lable>: <br />
+                        <input type="text" name="Postal_Code" id="PostalCode" placeholder="Postal Code" required="required" title="PostalCode is a required field" />
+                </div>
+<!--
                 <div>
                     <fieldset>
                         <legend>Would you like to join our mailing list?</legend>
@@ -73,10 +110,10 @@
                         <label><input type="checkbox" name="Interested_In" value="Lollipops" /> Complimentary Lollipops</label><br />
                     </fieldset>
                 </div>
-
+-->
                 <div>
-                    <lable for="Comments">Comments</lable>: <br />
-                    <textarea name="Comments" cols="36" rows="4" id="Comments"></textarea>
+                    <lable for="Notes">Notes</lable>: <br />
+                    <textarea name="Notes" cols="36" rows="4" id="Notes" placeholder="Enter any comments or notes here!"></textarea>
                 </div>
 
                 <div>

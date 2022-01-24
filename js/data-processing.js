@@ -1,3 +1,11 @@
+//builds the titleCase function 
+function titleCase(str) {
+    str = str.toLowerCase().split(' ');
+    for (var i = 0; i < str.length; i++) {
+        str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
+    }
+    return str.join(' ');
+}
 
 //use location object to access querystring (address bar)
 const queryString = window.location.search;
@@ -6,7 +14,7 @@ let myCart = '';//will store cart details
 let myTotal = 0; //will store total cost
 
 // --- My stuff--- 
-let titleCase = '';//will store the final string 
+
 let first = '';//will store the word strings
 let last = '';//will store the word strings
 let address = '';//will store the word strings
@@ -37,27 +45,30 @@ if(queryString != "") {
         }else{//Build Shipping Info
             //https://stackoverflow.com/questions/542232/in-javascript-how-can-i-perform-a-global-replace-on-string-with-a-variable-insi
             //will replace underscore with spaces
+
+            switch (key){
+                case ("First_Name"):
+                case ("Last_Name"):
+                case ("Address"):
+                case ("City"):
+                    value = titleCase(value);
+                break;
+            }
+
             key = key.split("_").join(" ");
             myData += `<p>${key}: ${value}</p>`;
         }
 
-        //builds the titleCase function 
-        function titleCase(str) {
-            str = str.toLowerCase().split(' ');
-            for (var i = 0; i < str.length; i++) {
-              str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
-            }
-            return str.join(' ');
+
+/*
+        //Finds the first name and outputs it 
+        if (`${key}` == "First Name") {
+            myData += titleCase(FirstName.toString());
+            alert("key: " + `${key}`);
+        }else{
+            alert("didn't work");
         }
-
-    //Finds the first name and outputs it 
-    if (`${key}` == "First Name") {
-        myData += titleCase(FirstName.toString());
-        alert("key: " + `${key}`);
-    }else{
-        alert("didn't work");
-    }
-
+*/
 
     });
 
